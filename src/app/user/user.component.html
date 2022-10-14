@@ -1,0 +1,12 @@
+<div>
+    <h1>user registration form</h1>
+    <form  [formGroup]="userForm" (ngSubmit)="onSubmit()" >
+        <input type="text" formControlName="username"  placeholder="username" id="">
+        <input type="text" formControlName="email"  placeholder="email" >
+        <input type="text" formControlName="address"  placeholder="address" id="">
+        <input type="text" formControlName="password" placeholder="password" id="">
+        <button type="submit" >submit</button>
+    </form>
+</div>
+<a routerLink="dashboard" > dashboard </a>
+<p>{{user$|async|json}}</p>
